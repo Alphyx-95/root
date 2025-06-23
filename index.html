@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jobs Creator - Docs</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+        
+        h1,
+        h2,
+        h3 {
+            color: #ffffff;
+        }
+        
+        code {
+            background-color: #2d2d2d;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #9cdcfe;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        
+        ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+        }
+        
+        pre {
+            background-color: #2d2d2d;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+        
+        .lang-switch {
+            margin-bottom: 2rem;
+        }
+        
+        .lang-switch button {
+            margin-right: 1rem;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        .lang-switch button:hover {
+            background-color: #444;
+        }
+        
+        .lang-content {
+            display: none;
+        }
+        
+        .lang-content.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="lang-switch">
+            <button onclick="switchLang('it')">🇮🇹 Italiano</button>
+            <button onclick="switchLang('en')">🇬🇧 English</button>
+        </div>
+
+        <div id="lang-it" class="lang-content active">
+            <h1>🔐 Sistema Avanzato di Gestione Stash</h1>
+            <p>Questo script offre un sistema pulito e intuitivo per la gestione degli stash (depositi) nei server FiveM. Permette di creare stash personalizzati con configurazione di slot e limite di peso.</p>
+
+            <h2>✅ Caratteristiche principali:</h2>
+            <ul>
+                <li>Nome stash personalizzabile</li>
+                <li>Configurazione degli slot</li>
+                <li>Impostazione del limite di peso</li>
+                <li>Controllo accesso basato su accesso pubblico o solo job</li>
+            </ul>
+
+            <p>⚠️ L’accesso agli stash è disponibile esclusivamente in modalità pubblica o basata sui job.</p>
+
+            <p>🔧 Per abilitare l’accesso, aggiungi questa riga nella configurazione ACL del server:</p>
+            <pre><code>add_ace license:xxxx stash.creator allow</code></pre>
+
+            <p>✨ Realizzato per framework ESX (QBCore non ancora supportato).</p>
+
+            <p>🔒 Risorsa protetta da Escrow, consegna automatica tramite Keymaster dopo l’acquisto.</p>
+
+            <p>💬 Contattami per supporto, personalizzazioni o aggiunta di funzionalità.</p>
+        </div>
+
+        <div id="lang-en" class="lang-content">
+            <h1>🔐 Advanced Stash Management System</h1>
+            <p>This script offers a clean and intuitive stash (storage) management system for FiveM servers. It allows you to create custom stashes with configurable slots and weight limits.</p>
+
+            <h2>✅ Key features:</h2>
+            <ul>
+                <li>Custom stash name</li>
+                <li>Slot configuration</li>
+                <li>Weight limit setting</li>
+                <li>Access control based on public access or job roles only</li>
+            </ul>
+
+            <p>⚠️ Warning: Access to stashes is available exclusively in public mode or job-based mode.</p>
+
+            <p>🔧 To enable access, add this line to your server’s ACL configuration:</p>
+            <pre><code>add_ace license:xxxx stash.creator allow</code></pre>
+
+            <p>✨ Built for ESX framework (QBCore is not yet supported).</p>
+
+            <p>🔒 This resource is Escrow protected and will be delivered automatically via Keymaster after purchase.</p>
+
+            <p>💬 Contact me for support or customizations.</p>
+        </div>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+            document.getElementById('lang-' + lang).classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
